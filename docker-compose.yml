@@ -1,0 +1,26 @@
+name: cisea-app
+
+networks:
+  app-network:
+    driver: bridge
+
+services:
+  shell:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "80:80"
+    networks:
+      - app-network
+
+  web_remote:
+    build:
+      context: ./apps/web_remote
+      dockerfile: Dockerfile
+    hostname: web_remote
+    networks:
+      - app-network
+    
+  
+    
