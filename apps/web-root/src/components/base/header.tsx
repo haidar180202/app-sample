@@ -116,16 +116,16 @@ const Header: React.FC = () => {
 
       {/* Right: Icons and Profile */}
       <nav className="d-flex align-items-center gap-3">
-        {!isMobile && (<><button className="circle-btn" title="Modules" aria-label="Modules">
+        {!isMobile && (<><Link to={"/item"} className="circle-btn" title="Modules" aria-label="Modules">
           <MdApps size={24} />
-        </button>
+        </Link>
 
           <Link to="/event-calendar" title="Event Calendar" className="circle-btn" aria-label="Event Calendar">
             <MdCalendarToday size={24} />
           </Link></>)}
 
         <button className="circle-btn position-relative" title="Notifications" aria-label="Notifications">
-          <MdNotifications size={24} />
+          <MdNotifications size={24} className="bg-gray"/>
           <span className="notification-badge" aria-live="polite" aria-atomic="true">5</span>
         </button>
 
@@ -133,7 +133,7 @@ const Header: React.FC = () => {
           onClick={toggleDarkMode}
           title={darkMode ? "Switch to Light Mode" : "Switch to Dark Mode"}
           aria-pressed={darkMode}
-          className="circle-btn"
+          className="circle-btn bg-gray"
           aria-label="Toggle dark mode"
         >
           {darkMode ? <MdLightMode size={24} /> : <MdDarkMode size={24} />}
@@ -185,7 +185,7 @@ const Header: React.FC = () => {
       {isMobile && (
         <div className={`mobile-menu ${isMenuOpen ? "open" : ""}`} role="menu" aria-label="Mobile menu">
           <nav className="d-flex flex-column p-3">
-            <Link to="/modules" className="mobile-menu-item" onClick={() => setIsMenuOpen(false)}>
+            <Link to="/item" className="mobile-menu-item" onClick={() => setIsMenuOpen(false)}>
               Modules
             </Link>
             <Link to="/event-calendar" className="mobile-menu-item" onClick={() => setIsMenuOpen(false)}>
