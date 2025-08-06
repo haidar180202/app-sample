@@ -2,7 +2,7 @@ import { BrowserRouter, Route, Routes } from "react-router";
 import ErrNotFound from "@components/common/Err/404";
 import { Load } from "./route.load";
 import { lazy } from "react";
-import { Module1 } from "./route.module";
+import { Item, Module1 } from "./route.module";
 
 const Dashboard = lazy(() => import("@pages/dashboard"));
 
@@ -24,6 +24,10 @@ export default function AppRouter() {
 
         <Route path="module" element={<Load node={<Module1 />} />}>
           <Route path="*" element={<Load node={<Module1 />} />} />
+        </Route>
+
+        <Route path="item" element={<Load node={<Item />} />}>
+          <Route path="*" element={<Load node={<Item />} />} />
         </Route>
 
 

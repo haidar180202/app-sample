@@ -24,3 +24,13 @@ services:
     
   
     
+  item:
+    build:
+      context: ./apps/item
+      dockerfile: Dockerfile
+    ports:
+      - "3000:80"
+    hostname: item
+    networks:
+      - app-network
+    

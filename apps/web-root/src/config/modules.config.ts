@@ -5,4 +5,9 @@ export const remotesLocal: RemoteConfig[] = [
     name: "web_remote",
     url: `http://localhost:3001`,
   },
+
+  {
+    name: "item",
+    url: `http://localhost:3005`,
+  },
 ];

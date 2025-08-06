@@ -18,3 +18,9 @@ export const Module1 = lazy(() =>
     return { default: () => <ErrLoadModule /> };
   }),
 );
+
+export const Item = lazy(() =>
+  import("item/app").catch(() => {
+    return { default: () => <ErrLoadModule /> };
+  }),
+);
