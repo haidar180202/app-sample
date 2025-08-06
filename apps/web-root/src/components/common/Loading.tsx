@@ -10,8 +10,8 @@ export default function Loading() {
     setIsDarkMode(themeMode === "true");
   }, []);
   document.body.setAttribute("data-bs-theme", isDarkMode ? "dark" : "light");
-  const LogoCisea = imageUrl("logos/logoNewCisea.png");
-  const LogoBukitAsam = imageUrl("logos/bukitasam-logo.svg");
+  const LogoCisea = imageUrl("logos/logo.png");
+  // const LogoBukitAsam = imageUrl("logos/bukitasam-logo.svg");
   // const LogoAkhlak = imageUrl("logos/akhlak-bumn.svg");
   // const LogoDanantara = imageUrl("logos/danantara.png")
 
@@ -25,7 +25,7 @@ export default function Loading() {
       <div className="overlay-loading" />
       <div className="top-logos d-flex justify-content-between align-items-center">
         <div className="logo-left">
-          <img src={LogoBukitAsam} alt="BukitAsam" className="pt-logo" />
+
         </div>
         <div className="logo-right">
           {/* <img src={LogoDanantara} alt="AKHLAK | BUMN" className="pt-logo-danantara" /> */}
@@ -33,8 +33,8 @@ export default function Loading() {
       </div>
 
       <div className="content-loading-wrapper">
-        <img src={LogoCisea} alt="Logo Cisea" className="cisea-logo-loading" />
-
+        <img src={LogoCisea} alt="sample-logo" className="cisea-logo-loading" />
+        <div className="mb-4 fw-bold">MyApp</div>
         <div className="progress-bar">
           <div className="progress-inner" />
         </div>
@@ -44,7 +44,7 @@ export default function Loading() {
         </span>
       </div>
       <p className="copyright">
-        ©Copyright {new Date().getFullYear()} PT Bukit Asam Tbk All Rights
+        ©Copyright {new Date().getFullYear()} Sample All Rights
         Reserved
       </p>
     </div>

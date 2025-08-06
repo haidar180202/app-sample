@@ -1,4 +1,4 @@
-name: app-sample
+name: myapp
 
 networks:
   app-network:
