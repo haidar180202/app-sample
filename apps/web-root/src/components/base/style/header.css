@@ -62,7 +62,7 @@
 .notification-badge {
   position: absolute;
   top: 0;
-  start: 100%;
+  /* start: 100%; */
   transform: translate(-50%, -50%);
   font-size: 0.65rem;
   background-color: #dc3545;

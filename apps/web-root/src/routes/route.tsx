@@ -4,7 +4,6 @@ import { Load } from "./route.load";
 import { lazy } from "react";
 import { Module1 } from "./route.module";
 
-
 const Dashboard = lazy(() => import("@pages/dashboard"));
 
 export default function AppRouter() {

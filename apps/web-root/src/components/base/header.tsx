@@ -26,9 +26,8 @@ const Header: React.FC = () => {
   const navigate = useNavigate();
 
   // Resize listener with debounce for responsiveness
- useEffect(() => {
-    // Gunakan tipe yang kompatibel lintas lingkungan:
-    let debounceTimer: ReturnType<typeof setTimeout>;
+  useEffect(() => {
+    let debounceTimer: NodeJS.Timeout;
     const handleResize = () => {
       clearTimeout(debounceTimer);
       debounceTimer = setTimeout(() => {

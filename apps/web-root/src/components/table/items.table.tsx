@@ -2,7 +2,7 @@ import { useItems, useItemsMutation } from "@api/items/items.api";
 import  { useState } from "react";
 
 
-export default function itemsTable() {
+export default function Dashboard() {
   const [page, setPage] = useState(1);
   const pageSize = 10;
 
