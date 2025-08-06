@@ -1,4 +1,4 @@
-name: cisea-app
+name: app-sample
 
 networks:
   app-network:
