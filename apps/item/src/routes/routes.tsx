@@ -6,6 +6,7 @@ import ProtectedPage from "@pages/protected.page";
 import ErrNotFound from "@components/common/Err/404";
 import { BASENAME_SHELL, BASENAME_MODULE } from "@config/base.config";
 
+
 export default function AppRouter() {
   return (
     // basename like your work zone
@@ -14,6 +15,7 @@ export default function AppRouter() {
     // all basename config will go to .env
     <BrowserRouter basename={`/${BASENAME_SHELL}/${BASENAME_MODULE}`}>
       <Routes>
+        <Route path="/0000" element={<Welcome module={BASENAME_MODULE} />} />
         <Route path="/" element={<Welcome module={BASENAME_MODULE} />} />
         <Route path="/another" element={<AnotherPage />} />
         <Route

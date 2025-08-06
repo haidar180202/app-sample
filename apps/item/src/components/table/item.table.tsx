@@ -1,5 +1,6 @@
-import { useItems, useItemsMutation } from "@api/items/items.api";
+
 import  { useState } from "react";
+import { useItems, useItemsMutation } from "../../apis/item/item.api";
 
 
 export default function itemsTable() {
@@ -20,7 +21,7 @@ export default function itemsTable() {
     );
 
   return (
-    <div>
+    <>
       <table className="table table-bordered table-striped table-hover">
         <thead className="table-primary">
           <tr>
@@ -88,6 +89,6 @@ export default function itemsTable() {
           </li>
         </ul>
       </nav>
-    </div>
+    </>
   );
 }
